@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReadAndWrite {
-    private static final String CONNECT_FILE_NAME = "connect.txt";
+    private static final String CONNECT_FILE_NAME = "connect.csv";
 
     public void write(List<Information> informationList) {
         FileOutputStream fileOutputStream = null;
