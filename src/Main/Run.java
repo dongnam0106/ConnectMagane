@@ -12,7 +12,7 @@ public class Run {
         String choose = null;
         boolean exit = false;
         ConnectManager connectManager = new ConnectManager();
-        int id;
+        String id;
 
         showMenu();
         while (true){

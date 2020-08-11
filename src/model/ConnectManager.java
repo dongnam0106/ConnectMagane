@@ -1,11 +1,7 @@
 package model;
 
-import java.io.InputStream;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
-import java.util.stream.Collectors;
 
 public class ConnectManager {
     public static Scanner sc = new Scanner(System.in);
@@ -18,7 +14,7 @@ public class ConnectManager {
     }
 
     public void add() {
-        int id = (informationList.size() >0)? (informationList.size() + 1) :1;
+        String id = inputId();
         String name = inputName();
         String phoneNumber = inputPhoneNumber();
         String phoneGroup = inputPhoneGroup();
@@ -31,7 +27,7 @@ public class ConnectManager {
         readAndWrite.write(informationList);
     }
 
-    public void edit(int id) {
+    public void edit(String id) {
         boolean isExisted = false;
         int size = informationList.size();
         for (int i = 0; i<size;i++) {
@@ -53,7 +49,7 @@ public class ConnectManager {
         }
     }
 
-    public void delete(int id) {
+    public void delete(String id) {
         Information information = null;
         int size = informationList.size();
         for (int i = 0; i < size; i++) {
@@ -113,9 +109,9 @@ public class ConnectManager {
         return sc.nextLine();
     }
 
-    public int inputId() {
+    public String inputId() {
         System.out.println("Nhập id: ");
-        return sc.nextInt();
+        return sc.nextLine();
     }
 
 //    public void sortConnectByName() {

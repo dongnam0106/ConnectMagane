@@ -3,7 +3,7 @@ package model;
 import java.io.Serializable;
 
 public class Information implements Serializable {
-    private int id;
+    private String id;
     private String phoneNumber;
     private String phoneGroup;
     private String name;
@@ -16,7 +16,7 @@ public class Information implements Serializable {
     }
 
 
-    public Information(int id, String phoneNumber, String phoneGroup, String name, String gender, String address, String dateOfBirth, String email) {
+    public Information(String id, String phoneNumber, String phoneGroup, String name, String gender, String address, String dateOfBirth, String email) {
         super();
         this.id = id;
         this.phoneNumber = phoneNumber;
@@ -28,11 +28,11 @@ public class Information implements Serializable {
         this.email = email;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
