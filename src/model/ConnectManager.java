@@ -53,7 +53,7 @@ public class ConnectManager {
         Information information = null;
         int size = informationList.size();
         for (int i = 0; i < size; i++) {
-            if(informationList.get(i).getId() == id){
+            if(informationList.get(i).getId().equals(id)){
                 information = informationList.get(i);
                 break;
             }
@@ -63,6 +63,23 @@ public class ConnectManager {
             readAndWrite.write(informationList);
         } else {
             System.out.println("Không tồn tại id: " + id);
+        }
+    }
+
+    public void find (String name) {
+        Information information = null;
+        boolean isExisted = false;
+        int size = informationList.size();
+        for (int i = 0; i < size; i++){
+            isExisted = true;
+            if(informationList.get(i).getName().equals(name)){
+                show();
+            }
+        }
+        if (!isExisted) {
+            System.out.println("Không tồn tại tên: " + name);
+        } else {
+            readAndWrite.write(informationList);
         }
     }
 
